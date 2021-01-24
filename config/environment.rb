@@ -11,3 +11,7 @@ ActiveRecord::Base.establish_connection(
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 require_all 'app'
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'vhs', 'vhs'
+end
